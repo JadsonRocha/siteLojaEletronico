@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Produtos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,15 +17,14 @@
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: white;
+            color: black;
             padding: 20px;
             display: flex;
             flex-direction: row;
         }
 
         header img {
-           
             height: auto;
             margin-top: 10px;
         }
@@ -52,12 +51,14 @@
             padding: 14px 16px;
             text-decoration: none;
         }
-        #titulo{
+
+        #titulo {
             width: 300px;
             text-align: center;
             padding-top: -100px;
             margin-left: 600px;
         }
+
         li a:hover {
             background-color: #ddd;
             color: black;
@@ -71,6 +72,53 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .redes-sociais img {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+        }
+
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        .produto {
+            width: 250px;
+            height: 300px;
+            margin: 20px;
+            padding: 10px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            background-color: #fff;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .produto:hover {
+            transform: scale(1.1);
+        }
+
+        .produto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .descricao {
+            margin-bottom: 10px;
+        }
+
+        .preco {
+            font-weight: bold;
         }
     </style>
 </head>
@@ -78,9 +126,8 @@
 <body>
 
     <header>
-        <img src="fotos/loja1.jpg" alt="Imagem da Loja Eletrônico">
+        <img src="fotosCatalogo/1.png" alt="Imagem da Loja Eletrônico">
         <h1 id="titulo">Loja Eletrônico</h1>
-        
     </header>
 
     <nav>
@@ -92,7 +139,178 @@
         </ul>
     </nav>
 
+    <div class="catalogo">
+        <!-- Produto 1 -->
+        <div class="produto">
+            <img src="fotosCatalogo/controle-sem-fio-ps5.png" alt="Produto 1">
+            <div class="descricao">
+                <p>Controle sem fio PS5 DualSense, Volcanic Red - CFI-ZCT1W</p>
+                <p class="preco">R$ 449,10</p>
+            </div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="produto">
+            <img src="fotosCatalogo/monitor-gamer-husky-blizzard.png" alt="Produto 2">
+            <div class="descricao">
+                <p>Monitor Gamer Husky Blizzard 27' LED Full HD, 240Hz, 1ms, HDMI </p>
+                <p class="preco">R$ 999,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/volante.png" alt="Produto 3">
+            <div class="descricao">
+                <p>Volante Thrustmaster Ferrari F1 Para T500RS, T300RS</p>
+                <p class="preco">R$ 1.079,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/macbook-air-apple.png" alt="Produto 4">
+            <div class="descricao">
+                <p>Notebook Macbook Air Apple, Tela de Retina 13", M2, 8GB RAM</p>
+                <p class="preco">R$ 8.499,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/jogo-god-of-war-ragnar.png" alt="Produto 5">
+            <div class="descricao">
+                <p>Jogo God of War Ragnarök, Edição Standard, PS5</p>
+                <p class="preco">R$ 179,90</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/console-sony-playstation-5-marvel-s-spider-man-2.png" alt="Produto 6">
+            <div class="descricao">
+                <p>Console Playstation 5 Sony, SSD 825GB, Marvel's Spider-Man 2</p>
+                <p class="preco">R$ 4.649,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/placa-de-video-rtx-4060-ti.png" alt="Produto 7">
+            <div class="descricao">
+                <p>Placa de Vídeo RTX 4060 Ti Eagle Gigabyte NVIDIA GeForce</p>
+                <p class="preco">R$ 2.649,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/headset-gamer-razer-kraken.png" alt="Produto 8">
+            <div class="descricao">
+                <p>Headset Gamer Razer Kraken X Lite, Surround 7.1</p>
+                <p class="preco">R$ 169,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/mouse-sem-fio-gamer-hyperx.png" alt="Produto 9">
+            <div class="descricao">
+                <p>Mouse Sem Fio Gamer HyperX Pulsefire Dart, RGB</p>
+                <p class="preco">R$ 349,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/cadeira-gamer-tempest-husky.png" alt="Produto 10">
+            <div class="descricao">
+                <p>Cadeira Gamer Husky Gaming Tempest 700, Branco</p>
+                <p class="preco">R$ 779,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/teclado-gamer-redragon.png" alt="Produto 11">
+            <div class="descricao">
+                <p>Teclado Gamer Redragon Lakshmi, Switch Brown</p>
+                <p class="preco">R$ 149,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/iphone-14-128gb.png" alt="Produto 12">
+            <div class="descricao">
+                <p>iPhone 14 Apple 128GB Meia-noite, Tela de 6,1", 5G</p>
+                <p class="preco">R$ 5.099,90</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/notebook-gamer-acer-nitro-amd.png" alt="Produto 13">
+            <div class="descricao">
+                <p>Notebook Gamer Acer Nitro AMD Ryzen 7, GeForce GTX 1650</p>
+                <p class="preco">R$ 3.799,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/Cadeira-Gamer-Snake.png" alt="Produto 14">
+            <div class="descricao">
+                <p>Cadeira Gamer Snake Lancaster Vermelha</p>
+                <p class="preco">R$ 399,00</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/headset-sem-fio-pulse-3d-adaptador.png" alt="Produto 15">
+            <div class="descricao">
+                <p>Headset sem Fio Sony Pulse 3D, Adaptador Sem Fio USB</p>
+                <p class="preco">R$ 474,90</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/base-de-carregamento-sony.png" alt="Produto 16">
+            <div class="descricao">
+                <p>Base de Carregamento Sony Para Controle DualSense</p>
+                <p class="preco">R$ 159,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/console-sony-playstation.png" alt="Produto 17">
+            <div class="descricao">
+                <p>Console Playstation 5 Sony, SSD 825GB</p>
+                <p class="preco">R$ 3.719,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/suporte-articulado-para-monitor.png" alt="Produto 18">
+            <div class="descricao">
+                <p>Suporte para Monitor Husky Office - Articulado, Com pistão a gás</p>
+                <p class="preco">R$ 129,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/fonte-corsair-cv550.png" alt="Produto 19">
+            <div class="descricao">
+                <p>Fonte Corsair CV550, 550W, 80 Plus Bronze</p>
+                <p class="preco">R$ 376,99</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img src="fotosCatalogo/smartphone-samsung-galaxy.png" alt="Produto 20">
+            <div class="descricao">
+                <p>Smartphone Samsung Galaxy S20 FE, 5G, 128GB, 6GB RAM</p>
+                <p class="preco">R$ 1.599,00</p>
+            </div>
+        </div>
+
+    </div>
+
     <footer>
+        <div class="redes-sociais">
+            <img src="fotos/iconfinder-social-media-applications-3instagram-4102579_113804.png"
+                alt="Logo Rede Social 1">
+            <img src="fotos/facebook_logo_icon_147291.png" alt="Logo Rede Social 2">
+            <img src="fotos/twitter_icon-icons.com_66688.png" Logo Rede Social 3">
+        </div>
         Todos os direitos reservados
     </footer>
 </body>

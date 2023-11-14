@@ -17,15 +17,15 @@
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: white;
+            color: black;
             padding: 20px;
             display: flex;
             flex-direction: row;
         }
 
         header img {
-           
+
             height: auto;
             margin-top: 10px;
         }
@@ -52,12 +52,14 @@
             padding: 14px 16px;
             text-decoration: none;
         }
-        #titulo{
+
+        #titulo {
             width: 300px;
             text-align: center;
             padding-top: -100px;
             margin-left: 600px;
         }
+
         li a:hover {
             background-color: #ddd;
             color: black;
@@ -106,6 +108,15 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .redes-sociais img {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
         }
     </style>
 </head>
@@ -113,9 +124,9 @@
 <body>
 
     <header>
-        <img src="fotos/loja1.jpg" alt="Imagem da Loja Eletrônico">
+        <img src="fotosCatalogo/1.png" alt="Imagem da Loja Eletrônico">
         <h1 id="titulo">Loja Eletrônico</h1>
-        
+
     </header>
 
     <nav>
@@ -168,11 +179,17 @@
 
 
     <footer>
+        <div class="redes-sociais">
+            <img src="fotos/iconfinder-social-media-applications-3instagram-4102579_113804.png"
+                alt="Logo Rede Social 1">
+            <img src="fotos/facebook_logo_icon_147291.png" alt="Logo Rede Social 2">
+            <img src="fotos/twitter_icon-icons.com_66688.png" Logo Rede Social 3">
+        </div>
         Todos os direitos reservados
     </footer>
 
     <script>
-        
+
         let txtPromocoes = document.getElementById("txtPromocoes");
         let imgPromocoes = document.getElementById("imgPromocoes");
         let btAntPromocoes = document.getElementById("botoesPromocoes").querySelector(".bts:first-child");
