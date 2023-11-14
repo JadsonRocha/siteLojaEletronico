@@ -10,17 +10,22 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: darkseagreen;
         }
 
         header {
             background-color: #333;
             color: #fff;
             padding: 20px;
-            text-align: center;
+            display: flex;
+            flex-direction: row;
         }
 
         header img {
-            max-width: 100%;
+           
             height: auto;
             margin-top: 10px;
         }
@@ -47,18 +52,15 @@
             padding: 14px 16px;
             text-decoration: none;
         }
-
+        #titulo{
+            width: 300px;
+            text-align: center;
+            padding-top: -100px;
+            margin-left: 600px;
+        }
         li a:hover {
             background-color: #ddd;
             color: black;
-        }
-
-        section {
-            display: none;
-        }
-
-        section.active {
-            display: block;
         }
 
         footer {
@@ -76,8 +78,9 @@
 <body>
 
     <header>
-        <h1>Loja Eletrônico</h1>
-        <img src="caminho_para_sua_imagem.jpg" alt="Imagem da Loja Eletrônico">
+        <img src="fotos/loja1.jpg" alt="Imagem da Loja Eletrônico">
+        <h1 id="titulo">Loja Eletrônico</h1>
+        
     </header>
 
     <nav>
