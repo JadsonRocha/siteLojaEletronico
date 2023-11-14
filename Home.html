@@ -1,11 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home - Loja Eletronico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: paleturquoise;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: #555;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        section {
+            font-family: 'Rancho', cursive;
+            font-size: 20px;
+            border-radius: 10px;
+            border-style: dashed;
+            margin: 20px;
+            height: 400px;
+            width: 400px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: gold;
+        }
+
+        .triangle-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        button {
+            border-radius: 10px;
+            width: 100px;
+            margin: 10px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
-    <p></p>
+
+    <header>
+        <h1>Loja Eletrônico</h1>
+        <img src="fotos/loja1.jpg" alt="Imagem da Loja Eletrônico">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="QuemSomos.html">Quem Somos</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="EntreEmContato.html">Entre em Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="triangle-container">
+        <section id="promocoes">
+            <h2>Promoções</h2>
+            <div id="containerPromocoes">
+                <img src="fotos/iphone-11.png" alt="" id="imgPromocoes">
+                <h1 id="txtPromocoes" class="font-effect-shadow-multiple">Iphone 11</h1>
+                <div id="botoesPromocoes">
+                    <button class="bts" onclick="AnteriorPromocoes()">Anterior</button>
+                    <button class="bts" onclick="ProximoPromocoes()">Próximo</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="novos">
+            <h2>Novos</h2>
+            <div id="containerNovos">
+                <img src="fotos/iphone-15.jpg" alt="" id="imgNovos">
+                <h1 id="txtNovos" class="font-effect-shadow-multiple">Iphone 15</h1>
+                <div id="botoesNovos">
+                    <button class="bts" onclick="AnteriorNovos()">Anterior</button>
+                    <button class="bts" onclick="ProximoNovos()">Próximo</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="funcionario">
+            <h2>Funcionário</h2>
+            <div id="containerFuncionario">
+                <img src="fotos/dono.png" alt="" id="imgFuncionario">
+                <h1 id="txtFuncionario" class="font-effect-shadow-multiple">Dono</h1>
+                <div id="botoesFuncionario">
+                    <button class="bts" onclick="AnteriorFuncionario()">Anterior</button>
+                    <button class="bts" onclick="ProximoFuncionario()">Próximo</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <footer>
+        Todos os direitos reservados
+    </footer>
+
+    <script>
+        // Promoções
+        let txtPromocoes = document.getElementById("txtPromocoes");
+        let imgPromocoes = document.getElementById("imgPromocoes");
+        let btAntPromocoes = document.getElementById("botoesPromocoes").querySelector(".bts:first-child");
+        let btProxPromocoes = document.getElementById("botoesPromocoes").querySelector(".bts:last-child");
+
+        let contPromocoes = 0;
+        let nomesPromocoes = ["Iphone 11", "Tablet", "Fone", "Capinha"];
+        let imagensPromocoes = ["fotos/iphone-11.png", "fotos/tablet.jpg", "fotos/fone.jpg", "fotos/capinha1.jpg"];
+
+        function AnteriorPromocoes() {
+            if (contPromocoes == 0)
+                contPromocoes = 3;
+            else
+                contPromocoes--;
+            txtPromocoes.innerText = nomesPromocoes[contPromocoes];
+            imgPromocoes.src = imagensPromocoes[contPromocoes];
+        }
+
+        function ProximoPromocoes() {
+            if (contPromocoes == 3)
+                contPromocoes = 0;
+            else
+                contPromocoes++;
+            txtPromocoes.innerText = nomesPromocoes[contPromocoes];
+            imgPromocoes.src = imagensPromocoes[contPromocoes];
+        }
+
+        // Novos
+        let txtNovos = document.getElementById("txtNovos");
+        let imgNovos = document.getElementById("imgNovos");
+        let btAntNovos = document.getElementById("botoesNovos").querySelector(".bts:first-child");
+        let btProxNovos = document.getElementById("botoesNovos").querySelector(".bts:last-child");
+
+        let contNovos = 0;
+        let nomesNovos = ["Iphone 15", "Iphone 15 Pro", "Iphone 15 Pro Max", "Apple Vision Pro"];
+        let imagensNovos = ["fotos/iphone-15.jpg", "fotos/iphone-15-pro.jfif", "fotos/iphone-15-pro-max.png", "fotos/visionPro.jpg"];
+
+        function AnteriorNovos() {
+            if (contNovos == 0)
+                contNovos = 3;
+            else
+                contNovos--;
+            txtNovos.innerText = nomesNovos[contNovos];
+            imgNovos.src = imagensNovos[contNovos];
+        }
+
+        function ProximoNovos() {
+            if (contNovos == 3)
+                contNovos = 0;
+            else
+                contNovos++;
+            txtNovos.innerText = nomesNovos[contNovos];
+            imgNovos.src = imagensNovos[contNovos];
+        }
+
+        // Funcionário
+        let txtFuncionario = document.getElementById("txtFuncionario");
+        let imgFuncionario = document.getElementById("imgFuncionario");
+        let btAntFuncionario = document.getElementById("botoesFuncionario").querySelector(".bts:first-child");
+        let btProxFuncionario = document.getElementById("botoesFuncionario").querySelector(".bts:last-child");
+
+        let contFuncionario = 0;
+        let nomesFuncionario = ["Dono", "Atendente", "Estagiário"];
+        let imagensFuncionario = ["fotos/dono.png", "fotos/secretaria.png", "fotos/estagiario.png"];
+
+        function AnteriorFuncionario() {
+            if (contFuncionario == 0)
+                contFuncionario = 2;
+            else
+                contFuncionario--;
+            txtFuncionario.innerText = nomesFuncionario[contFuncionario];
+            imgFuncionario.src = imagensFuncionario[contFuncionario];
+        }
+
+        function ProximoFuncionario() {
+            if (contFuncionario == 2)
+                contFuncionario = 0;
+            else
+                contFuncionario++;
+            txtFuncionario.innerText = nomesFuncionario[contFuncionario];
+            imgFuncionario.src = imagensFuncionario[contFuncionario];
+        }
+
+        function showPage(pageId) {
+            // Esconde todas as seções
+            document.querySelectorAll('section').forEach(function (section) {
+                section.classList.remove('active');
+            });
+
+            // Mostra apenas a seção correspondente à página clicada
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
 </body>
+
 </html>
