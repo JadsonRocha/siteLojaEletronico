@@ -13,11 +13,11 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-color: darkseagreen;
+            background-color: #0abab5;
         }
 
         header {
-            background-color: white;
+            background-color: greenyellow;
             color: black;
             padding: 20px;
             display: flex;
@@ -143,6 +143,10 @@
         <label for="cpf">CPF</label>
         <input id="cpf" name="cpf" type="text" maxlength="14" oninput="formatarCPF(event)">
 
+        <label for="telefone">Telefone</label>
+        <input id="telefone" name="telefone" type="text" maxlength="14" oninput="formatarTelefone(event)">
+        <span id="mensagemErroTelefone" class="mensagem-erro"></span>
+
         <button onclick="validarFormulario()">Enviar</button>
         <span id="mensagemErroGeral" class="mensagem-erro"></span>
     </div>
@@ -182,14 +186,32 @@
             cpf.value = cpf.value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
         }
 
+        function formatarTelefone(event) {
+            const telefone = event.target;
+            telefone.value = telefone.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+            telefone.value = telefone.value.replace(/^(\d\d)(\d)/g, '($1)$2');
+            telefone.value = telefone.value.replace(/(\d{5})(\d)/, '$1-$2');
+        }
+
         function validarFormulario() {
             const email = document.getElementById('email');
+            const telefone = document.getElementById('telefone');
             const mensagemErroGeral = document.getElementById('mensagemErroGeral');
+            const mensagemErroTelefone = document.getElementById('mensagemErroTelefone');
 
             if (!email.value.includes('@')) {
                 mensagemErroGeral.innerText = 'Email inválido';
             } else {
                 mensagemErroGeral.innerText = '';
+            }
+
+            if (telefone.value.length < 14) {
+                mensagemErroTelefone.innerText = 'Telefone inválido';
+            } else {
+                mensagemErroTelefone.innerText = '';
+            }
+
+            if (!mensagemErroGeral.innerText && !mensagemErroTelefone.innerText) {
                 alert('Formulário enviado com sucesso!');
             }
         }

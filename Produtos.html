@@ -13,11 +13,11 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-color: darkseagreen;
+            background-color: #0abab5;
         }
 
         header {
-            background-color: white;
+            background-color: greenyellow;
             color: black;
             padding: 20px;
             display: flex;
@@ -100,6 +100,7 @@
             background-color: #fff;
             text-align: center;
             transition: transform 0.3s ease-in-out;
+            cursor: pointer;
         }
 
         .produto:hover {
@@ -140,7 +141,6 @@
     </nav>
 
     <div class="catalogo">
-        <!-- Produto 1 -->
         <div class="produto">
             <img src="fotosCatalogo/controle-sem-fio-ps5.png" alt="Produto 1">
             <div class="descricao">
@@ -149,7 +149,6 @@
             </div>
         </div>
 
-        <!-- Produto 2 -->
         <div class="produto">
             <img src="fotosCatalogo/monitor-gamer-husky-blizzard.png" alt="Produto 2">
             <div class="descricao">
@@ -309,10 +308,19 @@
             <img src="fotos/iconfinder-social-media-applications-3instagram-4102579_113804.png"
                 alt="Logo Rede Social 1">
             <img src="fotos/facebook_logo_icon_147291.png" alt="Logo Rede Social 2">
-            <img src="fotos/twitter_icon-icons.com_66688.png" Logo Rede Social 3">
+            <img src="fotos/twitter_icon-icons.com_66688.png" alt="Logo Rede Social 3">
         </div>
         Todos os direitos reservados
     </footer>
+
+    <script>
+        document.querySelectorAll('.produto').forEach(function (produto) {
+            produto.addEventListener('click', function () {
+                var descricaoProduto = this.querySelector('.descricao p').innerText;
+                alert('Produto adicionado à sacola:\n' + descricaoProduto);
+            });
+        });
+    </script>
 </body>
 
 </html>

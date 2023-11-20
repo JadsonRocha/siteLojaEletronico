@@ -13,11 +13,12 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-color: darkseagreen;
+            background-color: #0abab5;
+            position: relative;
         }
 
         header {
-            background-color: white;
+            background-color: greenyellow;
             color: black;
             padding: 20px;
             display: flex;
@@ -25,7 +26,6 @@
         }
 
         header img {
-
             height: auto;
             margin-top: 10px;
         }
@@ -83,6 +83,30 @@
             height: 30px;
             margin: 0 5px;
         }
+
+        #carta-apresentacao {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            text-align: justify;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        #carta-apresentacao:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #imagem-central {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #imagem-central img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 
@@ -91,7 +115,6 @@
     <header>
         <img src="fotosCatalogo/1.png" alt="Imagem da Loja Eletrônico">
         <h1 id="titulo">Loja Eletrônico</h1>
-
     </header>
 
     <nav>
@@ -103,29 +126,48 @@
         </ul>
     </nav>
 
-    <p>A Lojas Solar pertence ao Grupo Solar. O Grupo Solar foi fundado no ano de 1966, na cidade de Salvador do Sul/RS,
-        onde permanece sua matriz.</p>
-    <p>Com o avanço das necessidades da região por produtos diferenciados e o aumento do poder de compra da população,
-        seus fundadores aumentaram a variedade de linhas e deram início na diversificação das mercadorias.</p>
-    <p>Assim surgiu as Lojas Solar, rede de lojas com dezenas de filiais no Estado, estando presente nas regiões do Vale
-        do Caí, Vale do Taquari, Vale dos Sinos, Encosta da Serra e Região Metropolitana, atuando nos ramos de materiais
-        de construção, ferramentas, móveis, eletrodomésticos e bazar.</p>
-    <p>As Lojas Solar investem em ambientes modernos com layout exclusivo. A equipe passa por treinamentos constantes a
-        fim de proporcionar um atendimento diferenciado aos clientes. A parceria sólida com os fornecedores permite
-        ótimas condições de financiamento e preços competitivos.</p>
-    <p>A preocupação com o bem-estar e satisfação dos consumidores, aliada à busca por novidades no mix de produtos são
-        fatores primordiais para levar mais felicidade ao lar de cada um dos clientes.</p>
+    <div id="carta-apresentacao">
+        <p>Bem-vindo à Nossa Loja de Eletrônicos!</p>
 
-    <img src="fotos/empresarios-em-reuniao-de-escritorio.jpg" alt="">
+        <p>Na nossa loja, oferecemos uma experiência única de compras para entusiastas de tecnologia e amantes de
+            eletrônicos. Navegue pelo nosso extenso catálogo e descubra as últimas novidades em dispositivos
+            eletrônicos, gadgets inovadores e acessórios de alta qualidade.</p>
+
+        <p>Por que escolher a nossa loja?</p>
+
+        <p>Variedade de Produtos: De smartphones de última geração a dispositivos inteligentes para casa, temos uma
+            ampla gama de produtos para atender às suas necessidades tecnológicas.</p>
+
+        <p>Qualidade Garantida: Trabalhamos apenas com as melhores marcas e garantimos a qualidade de cada produto que
+            vendemos. Sua satisfação é a nossa prioridade.</p>
+
+        <p>Atendimento Personalizado: Nossa equipe está aqui para ajudar. Se você tiver dúvidas sobre produtos ou
+            precisar de recomendações, estamos prontos para oferecer assistência personalizada.</p>
+
+        <p>Facilidade de Compra: Tornamos a experiência de compra online fácil e conveniente. Navegue, escolha seus
+            produtos favoritos e receba-os no conforto da sua casa.</p>
+
+        <p>Ofertas Exclusivas: Fique de olho nas nossas ofertas especiais e descontos exclusivos. Queremos garantir que
+            você obtenha os melhores preços em produtos de alta qualidade.</p>
+
+        <p>Explore a nossa loja hoje e mergulhe no emocionante mundo dos eletrônicos. Estamos ansiosos para ajudá-lo a
+            encontrar os dispositivos perfeitos que complementarão o seu estilo de vida digital. Boas compras!</p>
+    </div>
+
+    <div id="imagem-central">
+        <img class="imagem" src="fotos/view-neon-illuminated-gaming-desk-setup-with-keyboard.jpg" alt="Imagem 1">
+    </div>
+
     <footer>
         <div class="redes-sociais">
             <img src="fotos/iconfinder-social-media-applications-3instagram-4102579_113804.png"
                 alt="Logo Rede Social 1">
             <img src="fotos/facebook_logo_icon_147291.png" alt="Logo Rede Social 2">
-            <img src="fotos/twitter_icon-icons.com_66688.png" Logo Rede Social 3">
+            <img src="fotos/twitter_icon-icons.com_66688.png" alt="Logo Rede Social 3">
         </div>
         Todos os direitos reservados
     </footer>
+
 </body>
 
 </html>
