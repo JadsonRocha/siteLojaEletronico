@@ -164,7 +164,7 @@
     <script>
         function formatarNomeCompleto(event) {
             const nomeCompleto = event.target;
-            nomeCompleto.value = nomeCompleto.value.replace(/[^a-zA-Z ]/g, ''); // Remove caracteres não alfabéticos
+            nomeCompleto.value = nomeCompleto.value.replace(/[^a-zA-Z ]/g, ''); 
         }
 
         function validarEmail(event) {
@@ -180,7 +180,7 @@
 
         function formatarCPF(event) {
             const cpf = event.target;
-            cpf.value = cpf.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+            cpf.value = cpf.value.replace(/\D/g, ''); 
             cpf.value = cpf.value.replace(/(\d{3})(\d)/, '$1.$2');
             cpf.value = cpf.value.replace(/(\d{3})(\d)/, '$1.$2');
             cpf.value = cpf.value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
@@ -188,7 +188,7 @@
 
         function formatarTelefone(event) {
             const telefone = event.target;
-            telefone.value = telefone.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+            telefone.value = telefone.value.replace(/\D/g, ''); 
             telefone.value = telefone.value.replace(/^(\d\d)(\d)/g, '($1)$2');
             telefone.value = telefone.value.replace(/(\d{5})(\d)/, '$1-$2');
         }
