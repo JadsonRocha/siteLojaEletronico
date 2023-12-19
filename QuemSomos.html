@@ -14,7 +14,6 @@
             flex-direction: column;
             min-height: 100vh;
             background-color: #011826;
-            position: relative;
         }
 
         header {
@@ -22,12 +21,13 @@
             color: black;
             padding: 20px;
             display: flex;
-            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
 
         header img {
             height: auto;
-            margin-top: 10px;
+            margin-right: 10px;
         }
 
         nav {
@@ -39,10 +39,12 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
         }
 
         li {
-            float: left;
+            margin: 0 10px;
         }
 
         li a {
@@ -53,6 +55,11 @@
             text-decoration: none;
         }
 
+        li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
         #titulo {
             width: 300px;
             text-align: center;
@@ -60,10 +67,17 @@
             margin-left: 600px;
         }
 
-        li a:hover {
-            background-color: #ddd;
-            color: black;
+        .main-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+            flex: 1;
         }
+
+
 
         footer {
             background-color: #333;
@@ -87,11 +101,14 @@
         #carta-apresentacao {
             background-color: #fff;
             padding: 20px;
-            margin: 20px;
+            margin: 20px auto;
+            /* Centraliza horizontalmente */
             text-align: justify;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s ease;
+            max-width: 800px;
+            /* Defina uma largura máxima para o bloco de texto */
         }
 
         #carta-apresentacao:hover {

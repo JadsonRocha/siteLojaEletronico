@@ -21,12 +21,13 @@
             color: black;
             padding: 20px;
             display: flex;
-            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
 
         header img {
             height: auto;
-            margin-top: 10px;
+            margin-right: 10px;
         }
 
         nav {
@@ -38,10 +39,12 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
         }
 
         li {
-            float: left;
+            margin: 0 10px;
         }
 
         li a {
@@ -52,16 +55,16 @@
             text-decoration: none;
         }
 
+        li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
         #titulo {
             width: 300px;
             text-align: center;
             padding-top: -100px;
             margin-left: 600px;
-        }
-
-        li a:hover {
-            background-color: #ddd;
-            color: black;
         }
 
         footer {

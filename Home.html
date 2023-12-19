@@ -12,8 +12,6 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
             background-color: #011826;
         }
@@ -23,14 +21,13 @@
             color: black;
             padding: 20px;
             display: flex;
-            flex-direction: row;
-            margin-top: -120px;
+            justify-content: center;
+            align-items: center;
         }
 
         header img {
-
             height: auto;
-            margin-top: 10px;
+            margin-right: 10px;
         }
 
         nav {
@@ -42,11 +39,12 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            
+            display: flex;
+            justify-content: center;
         }
 
         li {
-            float: left;
+            margin: 0 10px;
         }
 
         li a {
@@ -57,6 +55,11 @@
             text-decoration: none;
         }
 
+        li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
         #titulo {
             width: 300px;
             text-align: center;
@@ -64,9 +67,14 @@
             margin-left: 600px;
         }
 
-        li a:hover {
-            background-color: #ddd;
-            color: black;
+        .main-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+            flex: 1;
         }
 
         section {
@@ -111,9 +119,9 @@
             padding: 10px;
             position: fixed;
             bottom: 0;
-            width: 68%;
+            width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
         }
 
@@ -156,237 +164,238 @@
         #botoesComentarios {
             margin-top: 10px;
         }
-        #topo{
-            height: 110px;
-            background-color: whitesmoke;
-            margin:0px;
-            width: 100%;
+
+        #containerPromocoes img,
+        #containerNovos img,
+        #containerFuncionario img {
+            max-width: 100%;
+            max-height: 400px;
         }
-        #barra{
-            height: 46px;
-            background-color: #1445A6;
-            margin:0px;
-            width: 100%;
+
+        #txtPromocoes,
+        #txtNovos,
+        #txtFuncionario {
+            font-size: 18px;
         }
     </style>
 </head>
 
-<body >
-    <div id="topo"></div>
-<div >
-    <header>
-        <img src="fotosCatalogo/1.png" alt="Imagem da Loja Eletrônico">
-        <h1 id="titulo">Loja Eletronic</h1>
+<body>
+    <div>
+        <header>
+            <img src="fotosCatalogo/1.png" alt="Imagem da Loja Eletrônico">
+            <h1 id="titulo">Loja Eletronic</h1>
 
-    </header>
-    <div id="barra"></div>
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="QuemSomos.html">Quem Somos</a></li>
-            <li><a href="produtos.html">Produtos</a></li>
-            <li><a href="EntreEmContato.html">Entre em Contato</a></li>
-        </ul>
-    </nav>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="QuemSomos.html">Quem Somos</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="EntreEmContato.html">Entre em Contato</a></li>
+            </ul>
+        </nav>
 
-    <div class="triangle-container">
-        <section id="promocoes">
-            <h2>Promoções</h2>
-            <div id="containerPromocoes">
-                <img src="fotos/iphone-11.png" alt="" id="imgPromocoes">
-                <h1 id="txtPromocoes" class="font-effect-shadow-multiple">Iphone 11 - R$2.599,00</h1>
-                <div id="botoesPromocoes">
-                    <button class="bts" onclick="AnteriorPromocoes()">Anterior</button>
-                    <button class="bts" onclick="ProximoPromocoes()">Próximo</button>
+        <div class="main-content">
+            <section id="promocoes">
+                <h2>Promoções</h2>
+                <div id="containerPromocoes">
+                    <img src="fotos/iphone-11.png" alt="" id="imgPromocoes">
+                    <h1 id="txtPromocoes" class="font-effect-shadow-multiple">Iphone 11 - R$2.599,00</h1>
+                    <div id="botoesPromocoes">
+                        <button class="bts" onclick="AnteriorPromocoes()">Anterior</button>
+                        <button class="bts" onclick="ProximoPromocoes()">Próximo</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="novos">
+                <h2>Novos produtos</h2>
+                <div id="containerNovos">
+                    <img src="fotos/iphone-15.jpg" alt="" id="imgNovos">
+                    <h1 id="txtNovos" class="font-effect-shadow-multiple">Iphone 15 - R$5.959.99</h1>
+                    <div id="botoesNovos">
+                        <button class="bts" onclick="AnteriorNovos()">Anterior</button>
+                        <button class="bts" onclick="ProximoNovos()">Próximo</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="funcionario">
+                <h2>Destaques</h2>
+                <div id="containerFuncionario">
+                    <img src="fotos/caixadesom.png" alt="" id="imgFuncionario">
+                    <h1 id="txtFuncionario" class="font-effect-shadow-multiple">Caixa de som JBL - R$3.699,00</h1>
+                    <div id="botoesFuncionario">
+                        <button class="bts" onclick="AnteriorFuncionario()">Anterior</button>
+                        <button class="bts" onclick="ProximoFuncionario()">Próximo</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="comentarios">
+            <h2>Comentários de Clientes</h2>
+            <div id="containerComentarios">
+                <div class="comentario active">
+                    <h3>Maria da Silva</h3>
+                    <p>"Ótima loja! Encontrei exatamente o que estava procurando. Produtos de alta qualidade e
+                        atendimento
+                        excelente."</p>
+                </div>
+                <div class="comentario">
+                    <h3>João Pereira</h3>
+                    <p>"Fiquei impressionado com a variedade de produtos. A entrega foi rápida e o suporte ao cliente é
+                        eficiente."</p>
+                </div>
+                <div class="comentario">
+                    <h3>Ana Oliveira</h3>
+                    <p>"Adoro comprar aqui! Sempre encontro as últimas novidades em eletrônicos com preços
+                        competitivos."
+                    </p>
+                </div>
+                <div class="comentario">
+                    <h3>Pedro Santos</h3>
+                    <p>"Recomendo a Loja Eletronic a todos os meus amigos. A experiência de compra é excelente e
+                        confiável."</p>
+                </div>
+                <div class="comentario">
+                    <h3>Juliana Lima</h3>
+                    <p>"Comprei meu smartphone aqui e estou muito satisfeito. A qualidade do produto superou minhas
+                        expectativas."</p>
+                </div>
+                <div id="botoesComentarios">
+                    <button class="bts" onclick="AnteriorComentario()">Anterior</button>
+                    <button class="bts" onclick="ProximoComentario()">Próximo</button>
                 </div>
             </div>
         </section>
 
-        <section id="novos">
-            <h2>Novos produtos</h2>
-            <div id="containerNovos">
-                <img src="fotos/iphone-15.jpg" alt="" id="imgNovos">
-                <h1 id="txtNovos" class="font-effect-shadow-multiple">Iphone 15 - R$5.959.99</h1>
-                <div id="botoesNovos">
-                    <button class="bts" onclick="AnteriorNovos()">Anterior</button>
-                    <button class="bts" onclick="ProximoNovos()">Próximo</button>
-                </div>
+        <footer>
+            <div class="redes-sociais">
+                <img src="fotos/iconfinder-social-media-applications-3instagram-4102579_113804.png"
+                    alt="Logo Rede Social 1">
+                <img src="fotos/facebook_logo_icon_147291.png" alt="Logo Rede Social 2">
+                <img src="fotos/twitter_icon-icons.com_66688.png" alt="Logo Rede Social 3">
             </div>
-        </section>
+            Todos os direitos reservados
+        </footer>
 
-        <section id="funcionario">
-            <h2>Destaques</h2>
-            <div id="containerFuncionario">
-                <img src="fotos/caixadesom.png" alt="" id="imgFuncionario">
-                <h1 id="txtFuncionario" class="font-effect-shadow-multiple">Caixa de som JBL - R$3.699,00</h1>
-                <div id="botoesFuncionario">
-                    <button class="bts" onclick="AnteriorFuncionario()">Anterior</button>
-                    <button class="bts" onclick="ProximoFuncionario()">Próximo</button>
-                </div>
-            </div>
-        </section>
+        <script>
+
+            let txtPromocoes = document.getElementById("txtPromocoes");
+            let imgPromocoes = document.getElementById("imgPromocoes");
+            let btAntPromocoes = document.getElementById("botoesPromocoes").querySelector(".bts:first-child");
+            let btProxPromocoes = document.getElementById("botoesPromocoes").querySelector(".bts:last-child");
+
+            let contPromocoes = 0;
+            let nomesPromocoes = ["Iphone 11 - R$2.599,00", "Tablet - R$1.499,00", "Fone - R$279,00", "Capinha - R$32,50"];
+            let imagensPromocoes = ["fotos/iphone-11.png", "fotos/tablet.jpg", "fotos/fone.jpg", "fotos/capinha1.jpg"];
+
+            function AnteriorPromocoes() {
+                if (contPromocoes == 0)
+                    contPromocoes = 3;
+                else
+                    contPromocoes--;
+                txtPromocoes.innerText = nomesPromocoes[contPromocoes];
+                imgPromocoes.src = imagensPromocoes[contPromocoes];
+            }
+
+            function ProximoPromocoes() {
+                if (contPromocoes == 3)
+                    contPromocoes = 0;
+                else
+                    contPromocoes++;
+                txtPromocoes.innerText = nomesPromocoes[contPromocoes];
+                imgPromocoes.src = imagensPromocoes[contPromocoes];
+            }
+
+            let txtNovos = document.getElementById("txtNovos");
+            let imgNovos = document.getElementById("imgNovos");
+            let btAntNovos = document.getElementById("botoesNovos").querySelector(".bts:first-child");
+            let btProxNovos = document.getElementById("botoesNovos").querySelector(".bts:last-child");
+
+            let contNovos = 0;
+            let nomesNovos = ["Iphone 15 - R$5.959.99", "Iphone 15 Pro - R$8.369,10", "Iphone 15 Pro Max-R$9.899,00", "Apple Vision Pro - R$16.981,70"];
+            let imagensNovos = ["fotos/iphone-15.jpg", "fotos/Iphone-15-pro.jpg", "fotos/iphone-15-pro-max.png", "fotos/visionPro.jpg"];
+
+            function AnteriorNovos() {
+                if (contNovos == 0)
+                    contNovos = 3;
+                else
+                    contNovos--;
+                txtNovos.innerText = nomesNovos[contNovos];
+                imgNovos.src = imagensNovos[contNovos];
+            }
+
+            function ProximoNovos() {
+                if (contNovos == 3)
+                    contNovos = 0;
+                else
+                    contNovos++;
+                txtNovos.innerText = nomesNovos[contNovos];
+                imgNovos.src = imagensNovos[contNovos];
+            }
+
+            let txtFuncionario = document.getElementById("txtFuncionario");
+            let imgFuncionario = document.getElementById("imgFuncionario");
+            let btAntFuncionario = document.getElementById("botoesFuncionario").querySelector(".bts:first-child");
+            let btProxFuncionario = document.getElementById("botoesFuncionario").querySelector(".bts:last-child");
+
+            let contFuncionario = 0;
+            let nomesFuncionario = ["Caixa de som JBL - R$3.699,00", "Alexa - R$1.399,00", "Smart watch - R$270,00"];
+            let imagensFuncionario = ["fotos/caixadesom.png", "fotos/alexa.png", "fotos/relogio.png"];
+
+            function AnteriorFuncionario() {
+                if (contFuncionario == 0)
+                    contFuncionario = 2;
+                else
+                    contFuncionario--;
+                txtFuncionario.innerText = nomesFuncionario[contFuncionario];
+                imgFuncionario.src = imagensFuncionario[contFuncionario];
+            }
+
+            function ProximoFuncionario() {
+                if (contFuncionario == 2)
+                    contFuncionario = 0;
+                else
+                    contFuncionario++;
+                txtFuncionario.innerText = nomesFuncionario[contFuncionario];
+                imgFuncionario.src = imagensFuncionario[contFuncionario];
+            }
+
+            function showPage(pageId) {
+                document.querySelectorAll('section').forEach(function (section) {
+                    section.classList.remove('active');
+                });
+
+                document.getElementById(pageId).classList.add('active');
+            }
+
+            let comentarios = document.getElementById("containerComentarios").querySelectorAll(".comentario");
+            let contComentario = 0;
+
+            function AnteriorComentario() {
+                comentarios[contComentario].classList.remove('active');
+                if (contComentario === 0) {
+                    contComentario = comentarios.length - 1;
+                } else {
+                    contComentario--;
+                }
+                comentarios[contComentario].classList.add('active');
+            }
+
+            function ProximoComentario() {
+                comentarios[contComentario].classList.remove('active');
+                if (contComentario === comentarios.length - 1) {
+                    contComentario = 0;
+                } else {
+                    contComentario++;
+                }
+                comentarios[contComentario].classList.add('active');
+            }
+        </script>
     </div>
-
-    <section id="comentarios">
-        <h2>Comentários de Clientes</h2>
-        <div id="containerComentarios">
-            <div class="comentario active">
-                <h3>Maria da Silva</h3>
-                <p>"Ótima loja! Encontrei exatamente o que estava procurando. Produtos de alta qualidade e atendimento
-                    excelente."</p>
-            </div>
-            <div class="comentario">
-                <h3>João Pereira</h3>
-                <p>"Fiquei impressionado com a variedade de produtos. A entrega foi rápida e o suporte ao cliente é
-                    eficiente."</p>
-            </div>
-            <div class="comentario">
-                <h3>Ana Oliveira</h3>
-                <p>"Adoro comprar aqui! Sempre encontro as últimas novidades em eletrônicos com preços competitivos."
-                </p>
-            </div>
-            <div class="comentario">
-                <h3>Pedro Santos</h3>
-                <p>"Recomendo a Loja Eletronic a todos os meus amigos. A experiência de compra é excelente e
-                    confiável."</p>
-            </div>
-            <div class="comentario">
-                <h3>Juliana Lima</h3>
-                <p>"Comprei meu smartphone aqui e estou muito satisfeito. A qualidade do produto superou minhas
-                    expectativas."</p>
-            </div>
-            <div id="botoesComentarios">
-                <button class="bts" onclick="AnteriorComentario()">Anterior</button>
-                <button class="bts" onclick="ProximoComentario()">Próximo</button>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="redes-sociais">
-            <img src="fotos/iconfinder-social-media-applications-3instagram-4102579_113804.png"
-                alt="Logo Rede Social 1">
-            <img src="fotos/facebook_logo_icon_147291.png" alt="Logo Rede Social 2">
-            <img src="fotos/twitter_icon-icons.com_66688.png" alt="Logo Rede Social 3">
-        </div>
-        Todos os direitos reservados
-    </footer>
-
-    <script>
-
-        let txtPromocoes = document.getElementById("txtPromocoes");
-        let imgPromocoes = document.getElementById("imgPromocoes");
-        let btAntPromocoes = document.getElementById("botoesPromocoes").querySelector(".bts:first-child");
-        let btProxPromocoes = document.getElementById("botoesPromocoes").querySelector(".bts:last-child");
-
-        let contPromocoes = 0;
-        let nomesPromocoes = ["Iphone 11 - R$2.599,00", "Tablet - R$1.499,00", "Fone - R$279,00", "Capinha - R$32,50"];
-        let imagensPromocoes = ["fotos/iphone-11.png", "fotos/tablet.jpg", "fotos/fone.jpg", "fotos/capinha1.jpg"];
-
-        function AnteriorPromocoes() {
-            if (contPromocoes == 0)
-                contPromocoes = 3;
-            else
-                contPromocoes--;
-            txtPromocoes.innerText = nomesPromocoes[contPromocoes];
-            imgPromocoes.src = imagensPromocoes[contPromocoes];
-        }
-
-        function ProximoPromocoes() {
-            if (contPromocoes == 3)
-                contPromocoes = 0;
-            else
-                contPromocoes++;
-            txtPromocoes.innerText = nomesPromocoes[contPromocoes];
-            imgPromocoes.src = imagensPromocoes[contPromocoes];
-        }
-
-        let txtNovos = document.getElementById("txtNovos");
-        let imgNovos = document.getElementById("imgNovos");
-        let btAntNovos = document.getElementById("botoesNovos").querySelector(".bts:first-child");
-        let btProxNovos = document.getElementById("botoesNovos").querySelector(".bts:last-child");
-
-        let contNovos = 0;
-        let nomesNovos = ["Iphone 15 - R$5.959.99", "Iphone 15 Pro - R$8.369,10", "Iphone 15 Pro Max-R$9.899,00", "Apple Vision Pro - R$16.981,70"];
-        let imagensNovos = ["fotos/iphone-15.jpg", "fotos/Iphone-15-pro.jpg", "fotos/iphone-15-pro-max.png", "fotos/visionPro.jpg"];
-
-        function AnteriorNovos() {
-            if (contNovos == 0)
-                contNovos = 3;
-            else
-                contNovos--;
-            txtNovos.innerText = nomesNovos[contNovos];
-            imgNovos.src = imagensNovos[contNovos];
-        }
-
-        function ProximoNovos() {
-            if (contNovos == 3)
-                contNovos = 0;
-            else
-                contNovos++;
-            txtNovos.innerText = nomesNovos[contNovos];
-            imgNovos.src = imagensNovos[contNovos];
-        }
-
-        let txtFuncionario = document.getElementById("txtFuncionario");
-        let imgFuncionario = document.getElementById("imgFuncionario");
-        let btAntFuncionario = document.getElementById("botoesFuncionario").querySelector(".bts:first-child");
-        let btProxFuncionario = document.getElementById("botoesFuncionario").querySelector(".bts:last-child");
-
-        let contFuncionario = 0;
-        let nomesFuncionario = ["Caixa de som JBL - R$3.699,00", "Alexa - R$1.399,00", "Smart watch - R$270,00"];
-        let imagensFuncionario = ["fotos/caixadesom.png", "fotos/alexa.png", "fotos/relogio.png"];
-
-        function AnteriorFuncionario() {
-            if (contFuncionario == 0)
-                contFuncionario = 2;
-            else
-                contFuncionario--;
-            txtFuncionario.innerText = nomesFuncionario[contFuncionario];
-            imgFuncionario.src = imagensFuncionario[contFuncionario];
-        }
-
-        function ProximoFuncionario() {
-            if (contFuncionario == 2)
-                contFuncionario = 0;
-            else
-                contFuncionario++;
-            txtFuncionario.innerText = nomesFuncionario[contFuncionario];
-            imgFuncionario.src = imagensFuncionario[contFuncionario];
-        }
-
-        function showPage(pageId) {
-            document.querySelectorAll('section').forEach(function (section) {
-                section.classList.remove('active');
-            });
-
-            document.getElementById(pageId).classList.add('active');
-        }
-
-        let comentarios = document.getElementById("containerComentarios").querySelectorAll(".comentario");
-        let contComentario = 0;
-
-        function AnteriorComentario() {
-            comentarios[contComentario].classList.remove('active');
-            if (contComentario === 0) {
-                contComentario = comentarios.length - 1;
-            } else {
-                contComentario--;
-            }
-            comentarios[contComentario].classList.add('active');
-        }
-
-        function ProximoComentario() {
-            comentarios[contComentario].classList.remove('active');
-            if (contComentario === comentarios.length - 1) {
-                contComentario = 0;
-            } else {
-                contComentario++;
-            }
-            comentarios[contComentario].classList.add('active');
-        }
-    </script>
-</div>
 </body>
 
 </html>
